@@ -1,1 +1,7 @@
 Exercise Rater App using AI
+
+ML MODEL
+Contains the code to create the databases of all exercises and a rating for each (Can be used to train the model)
+
+artificial-pt
+Front-end (react)
