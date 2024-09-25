@@ -22,4 +22,64 @@ h2 {
 
 form input {
   display: flex table-column;
+  background-color: transparent;
+  color: #ddd;
+  border: 2px solid #30313d;
+  margin-right: 2%;
+  border-radius: 5px;
+  width: 31.33%;
+}
+
+form button {
+  width: 100%;
+  margin-top: 5px;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+
+  background-color: #ddd;
+}
+
+div.exercises {
+  margin-top: 5px;
+}
+
+div.exercise {
+  display: flex;
+  padding: 5px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid #30313d;
+  border-radius: 5px;
+}
+
+div.exercise * {
+  margin: 5px 15px;
+}
+
+div.exercise div.name {
+  font-size: 1.2rem;
+}
+
+div.exercise div.muscle {
+  font-size: 0.8rem;
+}
+
+div.right {
+  text-align: right;
+}
+
+div.exercise div.Score {
+  font-size: 1.2rem;
+}
+
+div.Score.green {
+  color: #1c1;
+}
+
+div.Score.red {
+  color: #c11;
+}
+
+div.exercise div.rep_set {
+  font-size: 0.8rem;
 }

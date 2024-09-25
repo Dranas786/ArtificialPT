@@ -5,3 +5,7 @@ Contains the code to create the databases of all exercises and a rating for each
 
 artificial-pt
 Front-end (react)
+
+api
+Back-end (Express app)
+1) Using node index.js, need to rerun after every change, nodemon can help with that but need to add it to the Path for it to work
