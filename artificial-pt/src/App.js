@@ -1,10 +1,24 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [exerciseName, setExerciseName] = useState("");
   const [set, setSet] = useState(0);
   const [reps, setReps] = useState(0);
+  const [exercise, setExercise] = useState([]);
+  useEffect(() => {
+    getExercise().then((exercise) => {
+      setExercise(exercise);
+    });
+  }, []);
+
+  async function getExercise() {
+    const url = process.env.REACT_APP_API_URL + "/exercise";
+    const response = await fetch(url);
+    const json = await response.json();
+    return json;
+  }
+
   function handleSubmit(ev) {
     ev.preventDefault();
     const url = process.env.REACT_APP_API_URL + "/exercises";
@@ -13,7 +27,11 @@ function App() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ exerciseName, set, reps }),
+      body: JSON.stringify({
+        exerciseName,
+        set,
+        reps,
+      }),
     })
       .then((response) => response.json())
       .then((json) => console.log(json));
@@ -45,6 +63,7 @@ function App() {
         </div>
 
         <button type="submit">Add another exercise</button>
+        {exercise.length}
       </form>
       <div className="exercises">
         <div className="exercise">
