@@ -9,3 +9,4 @@ Front-end (react)
 api
 Back-end (Express app)
 1) Using node index.js, need to rerun after every change, nodemon can help with that but need to add it to the Path for it to work
+2) Get exercise info from the user, pull the difficulty and score from the main mongodb database, then push the result to the user input collection
